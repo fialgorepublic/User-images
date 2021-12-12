@@ -1,1 +1,1 @@
-$customerio = Customerio::Client.new(Rails.application.credentials.customerio[:site_id], Rails.application.credentials.customerio[:secret_key], region: Customerio::Regions::US)
+$customerio = Customerio::Client.new('d89b21b25d66276dcfe2', 'a57fe1c2b634e9313c4a', region: Customerio::Regions::US)
