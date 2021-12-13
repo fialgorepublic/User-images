@@ -41,6 +41,8 @@ class Api::V1::UserImagesController < Api::V1::BaseController
   def claim_image
     if @user_image && @user_image.update(user_id: current_user.id)
       render json: {success: true, message: "Image claimed successfully", data: @user_image.attributes.merge(image: @user_image.pic.attached? ?  url_for(@user_image.pic) : '')}
+    else
+      render json: {success: false, message: "Image not present"}
     end
   end
 
