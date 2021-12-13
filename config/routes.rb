@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :user_images do
-        member do
+        collection do
           post :send_image
           post :claim_image
         end
